@@ -201,3 +201,9 @@
     -fx-border-color: #C62098;
     -fx-border-width: 0px 0px 2px 0px;
 }
+.imag{
+    -fx-background-image: url("Images/DSC_0016-e1301876517212.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
