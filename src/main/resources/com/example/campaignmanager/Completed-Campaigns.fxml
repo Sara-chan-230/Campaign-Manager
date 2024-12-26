@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane hbarPolicy="NEVER" prefHeight="550.0" prefWidth="940.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.CompletedCampaigns">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="933.0" style="-fx-background-color: #ffffff;">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+            <children>
+                <Pane layoutX="40.0" layoutY="27.0" prefHeight="68.0" prefWidth="855.0" style="-fx-background-color: #4F45D9; -fx-background-radius: 50px;">
+                    <children>
+                        <ImageView fitHeight="65.0" fitWidth="68.0" layoutX="741.0" layoutY="1.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Images/Icon/approved.png" />
+                            </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="39.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Completed Campaigns">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+                <VBox layoutX="40.0" layoutY="137.0" prefHeight="400.0" prefWidth="858.0" />
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

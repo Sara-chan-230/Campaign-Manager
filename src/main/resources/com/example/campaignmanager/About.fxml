@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane hbarPolicy="NEVER" prefHeight="559.0" prefWidth="940.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.About">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="933.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Pane layoutX="660.0" layoutY="23.0" prefHeight="463.0" prefWidth="241.0" style="-fx-background-color: #0866FF; -fx-background-radius: 15px;">
+                    <children>
+                        <ImageView fitHeight="189.0" fitWidth="224.0" layoutX="14.0" layoutY="284.0" opacity="0.59" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Images/2965738-removebg-preview.png" />
+                            </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="53.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About">
+                            <font>
+                                <Font name="System Bold" size="30.0" />
+                            </font>
+                        </Text>
+                  <VBox layoutX="53.0" layoutY="120.0" prefHeight="164.0" prefWidth="178.0">
+                     <children>
+                        <Button fx:id="Email_org" mnemonicParsing="false" prefHeight="33.0" prefWidth="189.0" style="-fx-background-color: transparent;" styleClass="nav" text="contact@hopeforall.org">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/Icon/Social Media/email.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Phone_org" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="154.0" style="-fx-background-color: transparent;" styleClass="nav" text="+212 5XX XXX XXX">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/Icon/Social Media/telephone.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Facebook_org" layoutX="10.0" layoutY="43.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="185.0" style="-fx-background-color: transparent;" styleClass="nav" text="\@HopeForAllFoundation">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/Icon/Social Media/facebook (1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="X_Organization" layoutX="10.0" layoutY="77.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="162.0" style="-fx-background-color: transparent;" styleClass="nav" text="\@hopeforall.morocco">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/Icon/Social Media/twitter (1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Instagrame_org" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="118.0" style="-fx-background-color: transparent;" styleClass="nav" text="Hope4All_Mar">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/Icon/Social Media/instagram.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                    </children>
+                </Pane>
+                <Pane layoutX="489.0" layoutY="57.0" prefHeight="395.0" prefWidth="215.0" style="-fx-background-color: #4F45D9; -fx-background-radius: 0px  50px  0px 150px;">
+                    <children>
+                  <Circle fill="#ffffff00" layoutX="107.0" layoutY="115.0" radius="57.0" stroke="WHITE" strokeType="INSIDE" />
+                        <Circle fx:id="prof" fill="DODGERBLUE" layoutX="107.0" layoutY="115.0" radius="52.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Text fx:id="Name_Org" fill="WHITE" layoutX="52.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hope for ALL">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="Descreption_org" fill="WHITE" layoutX="24.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hope for All Foundation is dedicated to providing essential healthcare services and educational resources to underserved communities in Morocco. " textAlignment="CENTER" wrappingWidth="166.07177734375">
+                            <font>
+                                <Font size="11.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+                <Pane layoutX="31.0" layoutY="57.0" prefHeight="148.0" prefWidth="143.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15px;">
+                    <children>
+                        <ImageView fitHeight="88.0" fitWidth="108.0" layoutX="48.0" layoutY="52.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Images/Icon/progress.png" />
+                            </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="14.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In progress Campaigns" wrappingWidth="100.82483005523682">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="InProgress" fill="WHITE" layoutX="23.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+                            <font>
+                                <Font name="System Bold" size="58.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+                <Pane layoutX="183.0" layoutY="57.0" prefHeight="148.0" prefWidth="143.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15px;">
+                    <children>
+                        <ImageView fitHeight="77.0" fitWidth="79.0" layoutX="57.0" layoutY="63.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Images/Icon/hourglass.png" />
+                            </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="14.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coming Campaigns" wrappingWidth="100.82483005523682">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="Coming" fill="WHITE" layoutX="23.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+                            <font>
+                                <Font name="System Bold" size="58.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+                <Pane layoutX="333.0" layoutY="57.0" prefHeight="148.0" prefWidth="143.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 15px;">
+                    <children>
+                        <ImageView fitHeight="88.0" fitWidth="108.0" layoutX="48.0" layoutY="52.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Images/Icon/approved.png" />
+                            </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="14.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Completed Campaigns" wrappingWidth="100.82483005523682">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="Completed" fill="WHITE" layoutX="23.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">
+                            <font>
+                                <Font name="System Bold" size="58.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+            <Pane layoutX="31.0" layoutY="268.0" prefHeight="151.0" prefWidth="448.0" style="-fx-background-color: #EBFBFF; -fx-background-radius: 10px;">
+               <children>
+                  <ImageView fitHeight="173.0" fitWidth="185.0" layoutX="275.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/rb_2298.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="17.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you would like to review or update your organization's profile, simply click the button below to access your details." wrappingWidth="257.30926513671875" />
+                  <Button layoutX="17.0" layoutY="88.0" mnemonicParsing="false" onAction="#OpenLink" prefHeight="39.0" prefWidth="140.0" styleClass="buttons" text="Update your Profile" />
+               </children></Pane>
+            <Text fill="#063751" layoutX="32.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Review and Update Your Profile" wrappingWidth="302.82481479644775">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+        </AnchorPane>
+    </content>
+</ScrollPane>

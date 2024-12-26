@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane hbarPolicy="NEVER" prefHeight="550.0" prefWidth="940.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.CampaignManagement">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="541.0" prefWidth="933.0" style="-fx-background-color: #ffffff;">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+         <children>
+            <Pane layoutX="39.0" layoutY="28.0" prefHeight="297.0" prefWidth="596.0" style="-fx-background-color: rgba(8, 102, 255, 0.5);;" styleClass="about">
+               <children>
+                  <ImageView fitHeight="367.0" fitWidth="334.0" layoutX="289.0" layoutY="25.0" opacity="0.69" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/rb_2149160771.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="c_title" layoutX="21.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brick by Brick: Build a School, Build a Dream" wrappingWidth="309.0995788574219">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="c_descreption" layoutX="21.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brick by Brick: Build a School, Build a Dream is an initiative to construct a school in a rural area, bringing education closer to children in need. Every contribution helps create a safe, inspiring space where dreams can grow. Together, we can build brighter futures, one brick at a time." wrappingWidth="296.0449028015137" />
+                  <Text fx:id="goal" fill="WHITE" layoutX="34.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20K">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="21.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Needed Budget" />
+                  <Text fx:id="raised" fill="WHITE" layoutX="184.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4K">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="165.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raised Budget" />
+                  <Text fx:id="left" fill="WHITE" layoutX="317.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16K">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="315.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Left Budget" />
+               </children>
+            </Pane>
+            <Pane fx:id="c_image" layoutX="651.0" layoutY="28.0" prefHeight="210.0" prefWidth="231.0" style="-fx-background-color: #000000;" styleClass="imag" />
+            <Pane layoutX="651.0" layoutY="253.0" prefHeight="72.0" prefWidth="231.0" style="-fx-background-color: rgba(8, 102, 255, 0.5);" styleClass="about">
+               <children>
+                  <ImageView fitHeight="52.0" fitWidth="50.0" layoutX="20.0" layoutY="14.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Icon/timetable.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="c_date" fill="#000000b4" layoutX="82.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25-10-2024" wrappingWidth="122.0142822265625">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="37.0" layoutY="350.0" prefHeight="55.0" prefWidth="859.0" style="-fx-background-color: rgba(8, 102, 255, 0.4); -fx-background-radius: 10px;">
+               <children>
+                  <HBox layoutX="14.0" prefHeight="55.0" prefWidth="381.0" spacing="10.0">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#fetch_todo" prefHeight="55.0" prefWidth="88.0" style="-fx-text-fill: #ffffff;" styleClass="effect" text="To do List">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#fetch_resourses" prefHeight="55.0" prefWidth="87.0" style="-fx-text-fill: #ffffff;" styleClass="effect" text="Resourses">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" layoutX="110.0" layoutY="10.0" mnemonicParsing="false" onAction="#fetch_note" prefHeight="55.0" prefWidth="58.0" style="-fx-text-fill: #ffffff;" styleClass="effect" text="Note">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

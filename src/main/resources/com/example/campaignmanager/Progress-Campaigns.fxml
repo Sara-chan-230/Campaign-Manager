@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane hbarPolicy="NEVER" prefHeight="550.0" prefWidth="940.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.ProgressCampaigns">
+   <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="933.0" style="-fx-background-color: #ffffff;">
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         <children>
+            <Pane layoutX="40.0" layoutY="27.0" prefHeight="68.0" prefWidth="855.0" style="-fx-background-color: #0866FF; -fx-background-radius: 50px;">
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="68.0" layoutX="741.0" layoutY="1.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Icon/progress.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="39.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Progress Campaigns">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <AnchorPane id="model1" layoutX="40.0" layoutY="138.0" prefHeight="378.0" prefWidth="259.0">
+               <children>
+                  <Pane id="mod" layoutX="3.333333333333333" layoutY="2.6666666666666665" prefHeight="194.0" prefWidth="257.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <Circle id="cir" fill="#3c7cb3" layoutX="41.0" layoutY="153.0" radius="27.0" stroke="WHITE" strokeType="INSIDE" />
+                        <Circle fill="WHITE" layoutX="41.0" layoutY="153.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                        <Text fx:id="rized_porcentage" fill="#4f45d9" layoutX="27.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20%">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Text fx:id="campaign_title" layoutX="13.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brick by Brick: Build a School, Build a Dream" wrappingWidth="234.84344482421875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button id="modb" layoutX="12.0" layoutY="275.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="235.0" text="Manage Campaign">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Icon/project-management.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane layoutX="4.0" layoutY="347.0" prefHeight="54.0" prefWidth="256.0" styleClass="bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Pane layoutX="-1.0" layoutY="8.0" prefHeight="37.0" prefWidth="88.0" styleClass="sty">
+                           <children>
+                              <Text fill="#d9d9d9" layoutX="28.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="goal" layoutX="22.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20.000$" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="87.0" layoutY="8.0" prefHeight="37.0" prefWidth="88.0" styleClass="sty">
+                           <children>
+                              <Text fill="#d9d9d9" layoutX="24.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raised">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="raised" layoutX="26.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.000$" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="175.0" layoutY="8.0" prefHeight="46.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <Text fill="#d9d9d9" layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Left">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="left" layoutX="18.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16.000$" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <ProgressBar fx:id="progress" layoutX="12.0" layoutY="253.0" prefHeight="9.0" prefWidth="235.0" progress="0.2" style="-fx-border-radius: 20px;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="model1" layoutX="337.0" layoutY="138.0" prefHeight="378.0" prefWidth="259.0">
+               <children>
+                  <Pane id="mod" layoutX="3.333333333333333" layoutY="2.6666666666666665" prefHeight="194.0" prefWidth="257.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <Circle id="cir" fill="#3c7cb3" layoutX="41.0" layoutY="153.0" radius="27.0" stroke="WHITE" strokeType="INSIDE" />
+                        <Circle fill="WHITE" layoutX="41.0" layoutY="153.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                        <Text fx:id="rized_porcentage1" fill="#4f45d9" layoutX="27.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20%">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Text fx:id="campaign_title1" layoutX="13.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brick by Brick: Build a School, Build a Dream" wrappingWidth="234.84344482421875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button id="modb" layoutX="12.0" layoutY="275.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="235.0" text="Manage Campaign">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Icon/project-management.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane layoutX="4.0" layoutY="347.0" prefHeight="54.0" prefWidth="256.0" styleClass="bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Pane layoutX="-1.0" layoutY="8.0" prefHeight="37.0" prefWidth="88.0" styleClass="sty">
+                           <children>
+                              <Text fill="#d9d9d9" layoutX="28.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="goal1" layoutX="22.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20.000$" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="87.0" layoutY="8.0" prefHeight="37.0" prefWidth="88.0" styleClass="sty">
+                           <children>
+                              <Text fill="#d9d9d9" layoutX="24.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raised">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="raised1" layoutX="26.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.000$" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="175.0" layoutY="8.0" prefHeight="46.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <Text fill="#d9d9d9" layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Left">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="left1" layoutX="18.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16.000$" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <ProgressBar fx:id="progress1" layoutX="12.0" layoutY="253.0" prefHeight="9.0" prefWidth="235.0" progress="0.2" style="-fx-border-radius: 20px;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="model1" layoutX="635.0" layoutY="138.0" prefHeight="378.0" prefWidth="259.0">
+               <children>
+                  <Pane id="mod" layoutX="3.333333333333333" layoutY="2.6666666666666665" prefHeight="194.0" prefWidth="257.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <children>
+                        <Circle id="cir" fill="#3c7cb3" layoutX="41.0" layoutY="153.0" radius="27.0" stroke="WHITE" strokeType="INSIDE" />
+                        <Circle fill="WHITE" layoutX="41.0" layoutY="153.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
+                        <Text fx:id="rized_porcentage11" fill="#4f45d9" layoutX="27.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20%">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Text fx:id="campaign_title11" layoutX="13.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brick by Brick: Build a School, Build a Dream" wrappingWidth="234.84344482421875">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button id="modb" layoutX="12.0" layoutY="275.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="235.0" text="Manage Campaign">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Icon/project-management.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane layoutX="4.0" layoutY="347.0" prefHeight="54.0" prefWidth="256.0" styleClass="bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Pane layoutX="-1.0" layoutY="8.0" prefHeight="37.0" prefWidth="88.0" styleClass="sty">
+                           <children>
+                              <Text fill="#d9d9d9" layoutX="28.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="goal11" layoutX="22.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20.000$" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="87.0" layoutY="8.0" prefHeight="37.0" prefWidth="88.0" styleClass="sty">
+                           <children>
+                              <Text fill="#d9d9d9" layoutX="24.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raised">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="raised11" layoutX="26.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.000$" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="175.0" layoutY="8.0" prefHeight="46.0" prefWidth="81.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <Text fill="#d9d9d9" layoutX="27.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Left">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="left11" layoutX="18.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16.000$" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <ProgressBar fx:id="progress11" layoutX="12.0" layoutY="253.0" prefHeight="9.0" prefWidth="235.0" progress="0.2" style="-fx-border-radius: 20px;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
