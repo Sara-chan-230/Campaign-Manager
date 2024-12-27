@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane layoutX="-1.0" layoutY="23.0" prefHeight="503.0" prefWidth="860.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.Resoureses">
+    <children>
+        <TextField fx:id="resource_t" layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="291.0" promptText="Resource" style="-fx-background-color: #ffffff; -fx-border-color: #d9d9d9; -fx-border-radius: 5px;" />
+        <Button alignment="CENTER" layoutX="673.0" layoutY="14.0" mnemonicParsing="false" onAction="#add_new_reource" prefHeight="45.0" prefWidth="176.0" style="-fx-background-color: #0866FF;" text="Add new Resource" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="35.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/Icon/add-task.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <GridPane layoutX="14.0" layoutY="79.0" prefHeight="7.0" prefWidth="1.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+      <TextField fx:id="budget" layoutX="468.0" layoutY="14.0" prefHeight="45.0" prefWidth="187.0" promptText="Budget" style="-fx-background-color: #ffffff; -fx-border-color: #d9d9d9; -fx-border-radius: 5px;" />
+      <TableView layoutX="14.0" layoutY="79.0" prefHeight="251.0" prefWidth="836.0">
+        <columns>
+          <TableColumn fx:id="resource" prefWidth="452.6666717529297" styleClass="cell" text="Resource" />
+            <TableColumn fx:id="need_number" minWidth="0.0" prefWidth="125.99993896484375" styleClass="cell" text="Nombre" />
+          <TableColumn fx:id="resource_budget" prefWidth="120.0" styleClass="cell" text="Budget" />
+            <TableColumn prefWidth="138.0" styleClass="cell" />
+        </columns>
+      </TableView>
+      <Spinner fx:id="number_r" layoutX="330.0" layoutY="14.0" prefHeight="45.0" prefWidth="122.0" />
+      <HBox layoutX="317.0" layoutY="360.0" prefHeight="116.0" prefWidth="302.0" spacing="20.0">
+         <children>
+            <Pane prefHeight="81.0" prefWidth="150.0" style="-fx-background-color: #4F45D9; -fx-background-radius: 20px;">
+               <children>
+                  <ImageView fitHeight="87.0" fitWidth="106.0" layoutX="-8.0" layoutY="15.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Icon/resource.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="total_resources" fill="WHITE" layoutX="55.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20000">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="81.0" prefWidth="150.0" style="-fx-background-color: C62098FF; -fx-background-radius: 20px;">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="72.0" layoutX="7.0" layoutY="23.0" opacity="0.54" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Icon/budget.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="need_budget" fill="WHITE" layoutX="55.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20000">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

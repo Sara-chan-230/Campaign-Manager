@@ -7,8 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="190.0" prefWidth="205.0" style="-fx-background-color: #4F45D9; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="190.0" prefWidth="205.0" style="-fx-background-color: #4F45D9; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.Note">
    <children>
       <VBox layoutX="23.0" layoutY="7.0" prefHeight="180.0" prefWidth="160.0" spacing="20.0" style="-fx-background-radius: 10px;">
          <children>
@@ -17,8 +16,8 @@
                   <Image url="@../Images/Icon/notes.png" />
                </image>
             </ImageView>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Brick by Brick: Build a School, Build a Dream is an initiative to construct a school in a rural ar" wrappingWidth="159.56382751464844" />
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="25-10-2024">
+            <Text fx:id="note_body" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Brick by Brick: Build a School, Build a Dream is an initiative to construct a school in a rural ar" wrappingWidth="159.56382751464844" />
+            <Text fx:id="note_date" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="25-10-2024">
                <font>
                   <Font name="Arial Narrow Bold" size="14.0" />
                </font>
