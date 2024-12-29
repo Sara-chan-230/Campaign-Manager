@@ -49,6 +49,12 @@ public class MainProgramme{
         navigate("Campaign-Mangement.fxml");
 
     }
+    @FXML
+    void goToCampaign(ActionEvent event) throws Exception {
+        ScrollPane scrollPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/campaignmanager/Models/Campaign.fxml")));
+        campaignManager.setCenter(scrollPane);
+    }
+
     public void navigate(String fxmlFile) throws Exception {
             ScrollPane scrollPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/campaignmanager/"+fxmlFile)));
             campaignManager.setCenter(scrollPane);

@@ -191,7 +191,7 @@
 .effect:hover{
     -fx-text-fill: #0866FF;
     -fx-border-color: #0866FF;
-    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-width: 0px 0px 3px 0px;
 }
 .effect2{
     -fx-background-color: transparent;
