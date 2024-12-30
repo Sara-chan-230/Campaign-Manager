@@ -46,7 +46,7 @@ public class MainProgramme{
 
     @FXML
     public void goProgress(ActionEvent event) throws Exception {
-        navigate("Campaign-Mangement.fxml");
+        navigate("Progress-Campaigns.fxml");
 
     }
     @FXML
