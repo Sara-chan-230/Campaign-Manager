@@ -18,7 +18,7 @@
             </Label>
             <TextField fx:id="name" layoutX="26.0" layoutY="104.0" minHeight="37.0" minWidth="233.0" promptText="Name" styleClass="textf" />
             <PasswordField fx:id="password" layoutX="26.0" layoutY="163.0" minHeight="37.0" prefWidth="233.0" promptText="Password" styleClass="textf" />
-            <Button fx:id="submit" layoutX="26.0" layoutY="230.0" minHeight="37.0" mnemonicParsing="false" prefWidth="233.0" styleClass="buttons" text="Submit" />
+            <Button fx:id="submit" layoutX="26.0" layoutY="230.0" minHeight="37.0" mnemonicParsing="false" onAction="#signin" prefWidth="233.0" styleClass="buttons" text="Submit" />
          </children>
       </AnchorPane>
       <Label layoutX="27.0" layoutY="-9.0" prefHeight="67.0" prefWidth="95.0" text="Anaroz" textFill="WHITE">

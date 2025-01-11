@@ -13,17 +13,17 @@ import java.util.Objects;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        stage.setResizable(false);
         Image icon = new Image("file:C:\\Users\\ADM\\IdeaProjects\\Campaign Manager\\src\\main\\java\\com\\example\\campaignmanager\\investment.png");
         if (icon.isError()) {
             System.out.println("Error loading icon!");
         } else {
             stage.getIcons().add(icon);
         }
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main-Programme.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Sign-in.fxml")));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style.css")).toExternalForm());
         stage.setScene(scene);
-        //stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Sign In");
         stage.show();
     }
