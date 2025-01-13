@@ -36,7 +36,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></ColorPicker>
-            <VBox fx:id="inProgress_task" layoutX="14.0" layoutY="75.0" prefHeight="215.0" prefWidth="834.0" spacing="20.0">
+            <VBox fx:id="inProgress_task" layoutX="14.0" layoutY="75.0" prefWidth="834.0" spacing="20.0">
                <children>
                   <Text fill="#d9d9d9" strokeType="OUTSIDE" strokeWidth="0.0" text="In Progress Tasks">
                      <font>
@@ -47,11 +47,8 @@
                      </VBox.margin>
                   </Text>
                </children>
-               <padding>
-                  <Insets bottom="30.0" />
-               </padding>
             </VBox>
-            <VBox fx:id="completedtasks" layoutX="17.0" layoutY="290.0" prefHeight="215.0" prefWidth="834.0" spacing="20.0">
+            <VBox fx:id="completed_tasks" layoutX="14.0" layoutY="157.0" prefWidth="834.0" spacing="20.0">
                <children>
                   <Text fill="#d9d9d9" strokeType="OUTSIDE" strokeWidth="0.0" text="Completed Tasks">
                      <font>

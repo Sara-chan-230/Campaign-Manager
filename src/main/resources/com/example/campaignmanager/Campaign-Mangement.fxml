@@ -2,15 +2,12 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -55,20 +52,6 @@
                </children>
             </Pane>
             <Pane fx:id="c_image" layoutX="651.0" layoutY="28.0" prefHeight="210.0" prefWidth="231.0" style="-fx-background-color: #000000;" styleClass="imag" />
-            <Pane layoutX="651.0" layoutY="253.0" prefHeight="72.0" prefWidth="234.0" style="-fx-background-color: rgba(8, 102, 255, 0.5);" styleClass="about">
-               <children>
-                  <ImageView fitHeight="52.0" fitWidth="50.0" layoutX="20.0" layoutY="14.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Images/Icon/timetable.png" />
-                     </image>
-                  </ImageView>
-                  <Text fx:id="c_date" fill="#000000b4" layoutX="82.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25-10-2024" wrappingWidth="122.0142822265625">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
             <Pane layoutX="37.0" layoutY="350.0" prefHeight="55.0" prefWidth="856.0" style="-fx-background-color: rgba(8, 102, 255, 0.6); -fx-background-radius: 10px;">
                <children>
                   <HBox layoutX="14.0" prefHeight="55.0" prefWidth="381.0" spacing="10.0">
@@ -92,59 +75,21 @@
                   </HBox>
                </children>
             </Pane>
-            <AnchorPane fx:id="change_container" layoutX="37.0" layoutY="427.0">
+            <Pane layoutX="651.0" layoutY="253.0" prefHeight="72.0" prefWidth="234.0" style="-fx-background-color: rgba(8, 102, 255, 0.5);" styleClass="about">
                <children>
-                  <TextField layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="471.0" promptText="Task" style="-fx-background-color: #ffffff; -fx-border-color: #d9d9d9; -fx-border-radius: 5px;" />
-                  <Button alignment="CENTER" layoutX="673.0" layoutY="14.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="176.0" style="-fx-background-color: #0866FF;" text="Add new Task" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/Icon/add-task.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <VBox layoutX="14.0" layoutY="75.0" prefHeight="200.0" prefWidth="834.0" spacing="20.0">
-                     <children>
-                        <HBox prefHeight="43.0" prefWidth="834.0" spacing="30.0">
-                           <children>
-                              <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="43.0" prefWidth="683.0" style="-fx-background-color: #4F45D9; -fx-background-radius: 5px;" text="Task" textFill="WHITE">
-                                 <graphic>
-                                    <ImageView fitHeight="27.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@Images/Icon/to-do-list.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
-                                 <graphic>
-                                    <ImageView fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@Images/Icon/checklist.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
-                              <Button layoutX="600.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
-                                 <graphic>
-                                    <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@Images/Icon/remove-file.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Button>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
-                  <ColorPicker layoutX="514.0" layoutY="14.0" prefHeight="45.0" prefWidth="125.0" promptText="color" style="-fx-background-color: #0099FF;" />
+                  <ImageView fitHeight="52.0" fitWidth="50.0" layoutX="20.0" layoutY="14.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Icon/timetable.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="c_date" fill="#000000b4" layoutX="82.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25-10-2024" wrappingWidth="122.0142822265625">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
                </children>
-            </AnchorPane>
+            </Pane>
+            <AnchorPane fx:id="change_container" layoutX="37.0" layoutY="427.0" />
          </children>
         </AnchorPane>
     </content>

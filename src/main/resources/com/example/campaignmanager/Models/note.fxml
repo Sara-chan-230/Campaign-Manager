@@ -7,9 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.FlowPane?>
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="858.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.Note">
     <children>
@@ -35,14 +33,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></ColorPicker>
-            <GridPane fx:id="note_container" layoutX="14.0" layoutY="79.0" prefHeight="7.0" prefWidth="1.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-            </GridPane>
+            <FlowPane fx:id="note_container" hgap="20.0" layoutX="14.0" layoutY="79.0" prefHeight="0.0" prefWidth="0.0" vgap="20.0" />
             </children>
         </AnchorPane>
     </children>

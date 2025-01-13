@@ -1,23 +1,35 @@
 package com.example.campaignmanager;
-import javafx.event.ActionEvent;
+import dbc.Classes.Campaign;
+import dbc.Data_base_function;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.ScrollPane;
+import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 
-import java.util.Objects;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ProgressCampaigns {
+public class ProgressCampaigns implements Initializable {
     @FXML
     private FlowPane container;
 
-    @FXML
-    void goToCampaign(ActionEvent event) throws Exception {
-        fetch("Campaign-Mangement.fxml");
-    }
+    ObservableList<Campaign> cam_list = FXCollections.observableArrayList(Data_base_function.fetch_in_progess_campaigns(3));
 
-    public void fetch(String fxmlFile) throws Exception {
-        ScrollPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/campaignmanager/"+fxmlFile)));
-        container.getChildren().setAll(content);
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            for(Campaign campaign : cam_list) {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Campaign.fxml"));
+                CampaignCard cam = fxmlLoader.getController();
+                cam.setCampaign_Data(campaign);
+                AnchorPane contain = fxmlLoader.load();
+                container.getChildren().add(contain);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

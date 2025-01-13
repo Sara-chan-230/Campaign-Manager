@@ -19,6 +19,7 @@ public class Note {
 
     public int getId() {
         return id;
+
     }
 
     public String getDescription() {

@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="model1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="260.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.MainProgramme">
+<AnchorPane id="model1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="260.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.CampaignCard">
    <children>
-      <Pane id="mod" layoutX="3.333333333333333" layoutY="2.6666666666666665" prefHeight="194.0" prefWidth="257.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <Pane id="mod" fx:id="cam_image" layoutX="3.333333333333333" layoutY="2.6666666666666665" prefHeight="194.0" prefWidth="257.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
             <Circle id="cir" fill="#3c7cb3" layoutX="41.0" layoutY="153.0" radius="27.0" stroke="WHITE" strokeType="INSIDE" />
             <Circle fill="WHITE" layoutX="41.0" layoutY="153.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
@@ -29,7 +29,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Button id="modb" layoutX="12.0" layoutY="275.0" mnemonicParsing="false" onAction="#goToCampaign" prefHeight="32.0" prefWidth="235.0" text="Manage Campaign">
+      <Button id="modb" layoutX="12.0" layoutY="275.0" mnemonicParsing="false" onAction="#goCampaign" prefHeight="32.0" prefWidth="235.0" text="Manage Campaign">
          <graphic>
             <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>

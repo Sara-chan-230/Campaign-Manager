@@ -10,8 +10,9 @@ public class Organization {
     private String facebook;
     private String instagram;
     private String twitter;
+    private byte[] logo;
 
-    public Organization(String name_oganization, int ID, String password, String descreption, String email, String phone, String facebook, String instagram, String twitter) {
+    public Organization(String name_oganization, int ID, String password, String descreption, String email, String phone, String facebook, String instagram, String twitter, byte[] logo) {
         this.name_oganization = name_oganization;
         this.ID = ID;
         this.password = password;
@@ -21,6 +22,7 @@ public class Organization {
         this.facebook = facebook;
         this.instagram = instagram;
         this.twitter = twitter;
+        this.logo = logo;
     }
 
     public int getID() {
@@ -57,6 +59,9 @@ public class Organization {
 
     public String getTwitter() {
         return twitter;
+    }
+    public byte[] getLogo() {
+        return logo;
     }
 
 }

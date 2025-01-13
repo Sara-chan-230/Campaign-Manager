@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.Task">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.TaskModel">
     <children>
         <HBox layoutX="6.0" layoutY="7.0" prefHeight="43.0" prefWidth="834.0" spacing="15.0">
             <children>
-                <Button fx:id="c_task_title" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="43.0" prefWidth="683.0" style="-fx-background-color: #4F45D9; -fx-background-radius: 5px;" text="Task" textFill="WHITE">
+                <Button fx:id="task_title" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="43.0" prefWidth="683.0" style="-fx-background-color: #4F45D9; -fx-background-radius: 5px;" text="Task" textFill="WHITE">
                     <graphic>
                         <ImageView fitHeight="27.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                             <image>

@@ -47,7 +47,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></TextField>
-      <TableView layoutX="14.0" layoutY="79.0" prefHeight="251.0" prefWidth="836.0">
+      <TableView fx:id="table_r" layoutX="14.0" layoutY="79.0" prefHeight="251.0" prefWidth="836.0">
         <columns>
           <TableColumn fx:id="resource" prefWidth="452.6666717529297" styleClass="cell" text="Resource" />
             <TableColumn fx:id="need_number" minWidth="0.0" prefWidth="125.99993896484375" styleClass="cell" text="Nombre" />

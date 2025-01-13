@@ -20,7 +20,7 @@ public class Main extends Application {
         } else {
             stage.getIcons().add(icon);
         }
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Sign-in.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main-Programme.fxml")));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style.css")).toExternalForm());
         stage.setScene(scene);
