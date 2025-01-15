@@ -56,6 +56,8 @@ CREATE TABLE ToDoList (
 
 
 
+
+
 -- Organization Inserts
 INSERT INTO organization (name_oganization, password, descreption, email, phone, facebook, instagram, twitter, logo)
 VALUES
@@ -82,7 +84,7 @@ VALUES
 (1, 'Rebuilding Earthquake-affected Homes', 'This project focuses on providing new homes for families who lost everything in the earthquake. It aims to create safe and stable housing, allowing these families to start over. Currently, the project is progressing as planned.', '2025-01-01', 1000000.00, 300000.00, 'In progress', NULL),
 (1, 'Medical Assistance for Earthquake Victims', 'This initiative involves sending vital medical supplies, including medications and equipment, to areas impacted by the earthquake. The goal is to provide urgent medical care and prevent disease outbreaks. The operation is ongoing.', '2025-02-01', 500000.00, 150000.00, 'Coming', NULL),
 (1, 'Search and Rescue Operations', 'Teams are being deployed to search for survivors in collapsed buildings, using specialized equipment like sniffer dogs and sensors. This mission has now been completed successfully.', '2025-03-01', 800000.00, 400000.00, 'Completed', NULL),
-(1, 'This project ensures that food and water are provided to the affected communities. It’s designed to help people survive in the immediate aftermath of the disaster. The distribution is still ongoing.', '2025-04-01', 250000.00, 100000.00, 'In progress', NULL),
+(1,'HHHHHHHHHHHHHHHHHHHHH', 'This project ensures that food and water are provided to the affected communities. It’s designed to help people survive in the immediate aftermath of the disaster. The distribution is still ongoing.', '2025-04-01', 250000.00, 100000.00, 'In progress', NULL),
 (1, 'Temporary Shelters for Displaced Families', 'Temporary shelters are being set up for families who lost their homes, offering them a safe place to stay while more permanent solutions are planned. The project is currently in the planning phase.', '2025-05-01', 300000.00, 120000.00, 'Coming', NULL),
 (1, 'Rehabilitation of Damaged Infrastructure', 'This project focuses on repairing roads, bridges, and critical infrastructure. The goal is to restore essential services and help communities get back to normal. The rehabilitation efforts are set to begin soon.', '2025-06-01', 1500000.00, 500000.00, 'Coming', NULL),
 (1, 'Earthquake Awareness Campaign', 'The campaign aims to raise awareness about earthquake preparedness, teaching communities how to protect themselves in case of future earthquakes. It is currently active and ongoing.', '2025-07-01', 100000.00, 25000.00, 'Coming', NULL),
@@ -139,7 +141,7 @@ VALUES
 ('Host a volunteer recruitment event for flood relief operations.', '2025-03-05', '#ADFF2F', 2),
 ('Prepare emergency kits for families affected by drought.', '2025-03-07', '#9ACD32', 3),
 ('Coordinate with local authorities for disaster response training.', '2025-03-10', '#B0C4DE', 3),
-('Organize a donation drive for wildfire victims in the north.', '2025-03-15', '#D2691E', 3);
+('Organize a donation drive for wildfire victims in the north.', '2025-03-15', '#D2691E', 3),
 ('Coordinate emergency cleanup operations after oil spill in northern coast.', '2025-03-01', '#D2691E', 4),
 ('Ensure marine life rehabilitation efforts are on schedule.', '2025-03-05', '#20B2AA', 4),
 ('Develop a public awareness campaign on the importance of coral reefs.', '2025-03-07', '#FF6347', 4),
@@ -178,6 +180,4 @@ VALUES
 ('Launch a fundraising campaign to combat wildfires in northern Morocco.', FALSE, '#D2691E', 3),
 ('Work with local agencies to prevent disaster-related illnesses.', TRUE, '#A9A9A9', 4),
 ('Provide psycho-social support services to disaster survivors.', FALSE, '#8B0000', 4),
-('Organize training on disaster preparedness and response for communities.', TRUE, '#B0E0E6', 4);
-
-
+('Organize training on disaster preparedness and response for communities.', TRUE, '#B0E0E6', 4);
