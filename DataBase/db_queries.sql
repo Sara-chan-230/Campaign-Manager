@@ -60,7 +60,7 @@ INSERT INTO Campaign (org_id, campaign_name, campaign_description, campaign_date
 VALUES
 (1, 'Plant A Million Trees', 
 'An initiative to plant one million trees worldwide to combat climate change.', 
-'2025-01-01', 50000.00, 20000.00, 'Active', LOAD_FILE('C:/Users/Ibtissam/Downloads/your_image_name.png'));
+'2025-01-01', 50000.00, 20000.00, 'In progress', LOAD_FILE('C:/Users/Ibtissam/Downloads/your_image_name.png'));
 
 INSERT INTO Note (description, date, color, org_id)
 VALUES
