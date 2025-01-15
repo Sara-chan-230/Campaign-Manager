@@ -15,7 +15,7 @@ CREATE TABLE organization (
 
 CREATE TABLE campaign (
                           campaign_id INT AUTO_INCREMENT PRIMARY KEY,
-                          org_id INT,
+                          org_id INT NOT NULL,
                           campaign_name VARCHAR(255) NOT NULL,
                           campaign_description TEXT NOT NULL,
                           campaign_date DATE NOT NULL,
@@ -41,8 +41,8 @@ CREATE TABLE ressourses (
     name VARCHAR(255) NOT NULL,
     price FLOAT NOT NULL,
     quantity INT NOT NULL,
-    id_or INT NOT NULL,
-    FOREIGN KEY (id_or) REFERENCES organization(ID)
+    org_id INT NOT NULL,
+    FOREIGN KEY (org_id) REFERENCES organization(ID)
 );
 
 CREATE TABLE ToDoList (
@@ -50,8 +50,8 @@ CREATE TABLE ToDoList (
     content TEXT NOT NULL,
     completed BOOLEAN NOT NULL,
     color VARCHAR(50),
-    iD_O INT NOT NULL,
-    FOREIGN KEY (iD_O) REFERENCES organization(ID)
+    org_id INT NOT NULL,
+    FOREIGN KEY (org_id) REFERENCES organization(ID)
 );
 
 
@@ -148,7 +148,7 @@ VALUES
 ('Monitor water quality in coastal regions affected by pollution.', '2025-03-15', '#2E8B57', 4);
 
 
-INSERT INTO ressourses (name, price, quantity, id_or)
+INSERT INTO ressourses (name, price, quantity, org_id)
 VALUES
 ('Portable Water Filters', 25.00, 1000, 1),
 ('First Aid Kits', 30.00, 1500, 1),
@@ -165,7 +165,7 @@ VALUES
 ('Fireproof Clothing', 75.00, 200, 4);
 
 
-INSERT INTO ToDoList (content, completed, color, iD_O)
+INSERT INTO ToDoList (content, completed, color, org_id)
 VALUES
 ('Organize an emergency response plan for flood victims.', FALSE, '#8A2BE2', 1),
 ('Set up an emergency food distribution network for earthquake survivors.', TRUE, '#32CD32', 1),
