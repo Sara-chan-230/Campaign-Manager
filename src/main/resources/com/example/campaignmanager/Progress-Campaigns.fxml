@@ -31,7 +31,7 @@
                   </Text>
                </children>
             </Pane>
-            <FlowPane fx:id="container" hgap="35.0" layoutX="40.0" layoutY="123.0" prefWidth="857.0" vgap="35.0" />
+            <FlowPane fx:id="container" hgap="35.0" layoutX="40.0" layoutY="123.0" maxWidth="-Infinity" prefHeight="0.0" prefWidth="857.0" vgap="35.0" />
          </children>
       </AnchorPane>
    </content>

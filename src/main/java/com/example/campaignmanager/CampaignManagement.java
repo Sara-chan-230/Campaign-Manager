@@ -1,5 +1,6 @@
 package com.example.campaignmanager;
 
+import dbc.Classes.Campaign;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
@@ -21,7 +23,7 @@ public class CampaignManagement {
     private Text c_descreption;
 
     @FXML
-    private Pane c_image;
+    private Rectangle c_image;
 
     @FXML
     private Text c_title;
@@ -61,6 +63,12 @@ public class CampaignManagement {
     public void fetch(String fxmlFile) throws Exception {
         AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/campaignmanager/Models/"+fxmlFile)));
         change_container.getChildren().setAll(content);
+    }
+
+    public void set_data(Campaign campaign){
+        c_date.setText(campaign.getCampaign_date()+"");
+        c_descreption.setText(campaign.getCampaign_description()+"");
+
     }
 
 }

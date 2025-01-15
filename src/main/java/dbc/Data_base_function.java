@@ -1,7 +1,7 @@
 package dbc;
 
 import dbc.Classes.*;
-import org.w3c.dom.ls.LSOutput;
+
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -76,12 +76,15 @@ public class Data_base_function {
         return task;
     }
 
-    public static void preparation(String q){
+    public static List<Campaign> preparation(String q)  {
+        List<Campaign> campaigns = new ArrayList<>();
+
         try(PreparedStatement ps = con.prepareStatement(q)) {
+            System.out.println(con);
             ResultSet rs = ps.executeQuery();
             while (rs.next()){
                 int id_cam = rs.getInt("campaign_id");
-                String title = rs.getString("scampaign_name");
+                String title = rs.getString("campaign_name");
                 String desc = rs.getString("campaign_description");
                 Date date = rs.getDate("campaign_date");
                 float n_budget = rs.getFloat("needed_budjet");
@@ -89,16 +92,19 @@ public class Data_base_function {
                 String status = rs.getString("campaign_status");
                 byte[] image = rs.getBytes("campaign_image");
                 int org_id = rs.getInt("org_id");
+                campaigns.add(new Campaign(id_cam,org_id,title,desc,date,n_budget,r_budget,status,image));
             }
         }catch (SQLException e){
             throw new RuntimeException(e);
         }
+        return campaigns;
     }
 
     public static List<Campaign> fetch_in_progess_campaigns(int organization_id){
         ArrayList<Campaign> list_campaign = new ArrayList<>();
         String query = "SELECT * FROM campaign WHERE org_id = " + organization_id + " AND campaign_status = 'In progress'";
-        preparation(query);
+        list_campaign.addAll(preparation(query));
+        System.out.println(list_campaign);
         return list_campaign;
     }
 
@@ -118,7 +124,7 @@ public class Data_base_function {
 
     public static int count_in_progress_campaigns(int organization_id){
         int count = 0;
-        String query ="Select count(campaign_id) From Campaign campaign WHERE campaign_status = 'In progress' AND org_id = ? ";
+        String query ="Select count(campaign_id) From campaign WHERE campaign_status = 'In progress' AND org_id = ? ";
         try (PreparedStatement ps = con.prepareStatement(query);) {
             ps.setInt(1, organization_id);
             ResultSet rs = ps.executeQuery();
@@ -129,13 +135,14 @@ public class Data_base_function {
         }catch (SQLException e){
             throw new RuntimeException(e);
         }
+        System.out.println(count);
 
         return count;
     }
 
     public static int count_camming_campaign(int organization_id){
         int count = 0;
-        String query ="Select count(campaign_id) From Campaign campaign WHERE campaign_status = 'Camming' AND org_id = ? ";
+        String query ="Select count(campaign_id) From campaign WHERE campaign_status = 'Camming' AND org_id = ? ";
         try (PreparedStatement ps = con.prepareStatement(query);) {
             ps.setInt(1, organization_id);
             ResultSet rs = ps.executeQuery();
@@ -153,7 +160,7 @@ public class Data_base_function {
 
     public static int count_Completed_campaign(int organization_id){
         int count = 0;
-        String query ="Select count(campaign_id) From Campaign campaign WHERE campaign_status = 'Campleted' AND org_id = ? ";
+        String query ="Select count(campaign_id) From campaign WHERE campaign_status = 'Campleted' AND org_id = ? ";
         try (PreparedStatement ps = con.prepareStatement(query);) {
             ps.setInt(1, organization_id);
             ResultSet rs = ps.executeQuery();
@@ -181,7 +188,7 @@ public class Data_base_function {
                     int id = rs.getInt("ID");
                     String name = rs.getString("name_oganization");
                     String password = rs.getString("password");
-                    String description = rs.getString("description");
+                    String description = rs.getString("descreption");
                     String email = rs.getString("email");
                     String phone  = rs.getString("phone");
                     String facebook = rs.getString("facebook");

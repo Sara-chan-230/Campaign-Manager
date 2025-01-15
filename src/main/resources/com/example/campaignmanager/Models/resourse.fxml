@@ -52,7 +52,7 @@
           <TableColumn fx:id="resource" prefWidth="452.6666717529297" styleClass="cell" text="Resource" />
             <TableColumn fx:id="need_number" minWidth="0.0" prefWidth="125.99993896484375" styleClass="cell" text="Nombre" />
           <TableColumn fx:id="resource_budget" prefWidth="120.0" styleClass="cell" text="Budget" />
-            <TableColumn prefWidth="138.0" styleClass="cell" />
+            <TableColumn fx:id="actions" prefWidth="138.0" styleClass="cell" />
         </columns>
       </TableView>
       <Spinner fx:id="number_r" editable="true" layoutX="330.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="45.0" prefWidth="122.0">

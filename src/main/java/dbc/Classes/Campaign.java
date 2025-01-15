@@ -20,7 +20,7 @@ public class Campaign {
     public Campaign(int campaign_id, int org_id , String campaign_name, String campaign_description, Date campaign_date, float needed_budjet, float raised_budjet, String campaign_status, byte[] campaign_image) {
         this.campaign_id = campaign_id;
         this.org_id = org_id;
-        this.campaign_name = campaign_description;
+        this.campaign_name = campaign_name;
         this.campaign_date = campaign_date;
         this.campaign_description = campaign_description;
         this.needed_budjet = needed_budjet;

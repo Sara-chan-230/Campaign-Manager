@@ -65,9 +65,9 @@ public class About  implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        InProgress.setText(Data_base_function.count_in_progress_campaigns(3)+"");
-        Coming.setText(Data_base_function.count_camming_campaign(3)+"");
-        Completed.setText(Data_base_function.count_Completed_campaign(3)+"");
+        InProgress.setText(Data_base_function.count_in_progress_campaigns(1)+"");
+        Coming.setText(Data_base_function.count_camming_campaign(1)+"");
+        Completed.setText(Data_base_function.count_Completed_campaign(1)+"");
         Organization org = Data_base_function.fetch_organization(1);
         Email_org.setText(org.getEmail());
         Facebook_org.setText(org.getFacebook());
