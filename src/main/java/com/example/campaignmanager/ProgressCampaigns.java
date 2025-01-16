@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 
@@ -25,8 +26,6 @@ public class ProgressCampaigns implements Initializable {
         try {
 
             cam_list.addAll(Data_base_function.fetch_in_progess_campaigns(1));
-
-
             for (Campaign campaign : cam_list) {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Models\\Campaign.fxml"));
                 if (fxmlLoader.getLocation() == null) {
@@ -35,6 +34,13 @@ public class ProgressCampaigns implements Initializable {
                 }
                 AnchorPane contain = fxmlLoader.load();
                 CampaignCard cam = fxmlLoader.getController();
+                cam.getGo().setOnAction(event -> {
+                    try {
+                        cam.oppent_new_scene(campaign);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
                 cam.setCampaign_Data(campaign);
                 container.getChildren().add(contain);
             }

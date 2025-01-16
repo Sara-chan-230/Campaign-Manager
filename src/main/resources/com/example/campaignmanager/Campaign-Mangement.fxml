@@ -12,9 +12,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane hbarPolicy="NEVER" prefHeight="657.0" prefWidth="940.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.CampaignManagement">
+<ScrollPane hbarPolicy="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="940.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.CampaignManagement">
     <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: #ffffff;">
+        <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="953.0" style="-fx-background-color: #ffffff;">
             <padding>
                 <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
             </padding>
@@ -32,19 +32,19 @@
                      </font>
                   </Text>
                   <Text fx:id="c_descreption" layoutX="21.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brick by Brick: Build a School, Build a Dream is an initiative to construct a school in a rural area, bringing education closer to children in need. Every contribution helps create a safe, inspiring space where dreams can grow. Together, we can build brighter futures, one brick at a time." wrappingWidth="296.0449028015137" />
-                  <Text fx:id="goal" fill="WHITE" layoutX="34.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20K">
+                  <Text fx:id="goal" fill="WHITE" layoutX="15.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20K" textAlignment="CENTER" wrappingWidth="95.57815551757812">
                      <font>
                         <Font name="System Bold" size="32.0" />
                      </font>
                   </Text>
                   <Text layoutX="21.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Needed Budget" />
-                  <Text fx:id="raised" fill="WHITE" layoutX="184.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4K">
+                  <Text fx:id="raised" fill="WHITE" layoutX="163.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4K" textAlignment="CENTER" wrappingWidth="80.50521850585938">
                      <font>
                         <Font name="System Bold" size="32.0" />
                      </font>
                   </Text>
                   <Text layoutX="165.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raised Budget" />
-                  <Text fx:id="left" fill="WHITE" layoutX="317.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16K">
+                  <Text fx:id="left" fill="WHITE" layoutX="306.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16K" textAlignment="CENTER" wrappingWidth="78.91143798828125">
                      <font>
                         <Font name="System Bold" size="32.0" />
                      </font>
@@ -89,8 +89,8 @@
                   </Text>
                </children>
             </Pane>
-            <AnchorPane fx:id="change_container" layoutX="37.0" layoutY="427.0" />
-            <Rectangle fx:id="c_image" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="211.0" layoutX="651.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-width: 30px; -fx-arc-height: 30px;" styleClass="about" width="235.0" />
+            <AnchorPane fx:id="change_container" layoutX="37.0" layoutY="427.0" maxWidth="-Infinity" prefHeight="3.0" prefWidth="859.0" />
+            <Rectangle fx:id="c_image" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="211.0" layoutX="651.0" layoutY="28.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-width: 30px; -fx-arc-height: 30px;" styleClass="about" width="235.0" />
          </children>
         </AnchorPane>
     </content>

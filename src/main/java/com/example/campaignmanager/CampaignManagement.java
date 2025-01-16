@@ -6,12 +6,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
-import java.io.IOException;
+import java.io.ByteArrayInputStream;
 import java.util.Objects;
 
 public class CampaignManagement {
@@ -61,14 +62,22 @@ public class CampaignManagement {
         fetch("task.fxml");
     }
     public void fetch(String fxmlFile) throws Exception {
-        AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/campaignmanager/Models/"+fxmlFile)));
+        ScrollPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/campaignmanager/Models/"+fxmlFile)));
         change_container.getChildren().setAll(content);
     }
 
     public void set_data(Campaign campaign){
         c_date.setText(campaign.getCampaign_date()+"");
-        c_descreption.setText(campaign.getCampaign_description()+"");
-
+        c_descreption.setText(campaign.getCampaign_description());
+        c_title.setText(campaign.getCampaign_name());
+        goal.setText((int)(campaign.getNeeded_budjet()/1000)+"K");
+        raised.setText((int)(campaign.getRaised_budjet()/1000)+"K");
+        left.setText((int)((campaign.getNeeded_budjet()-campaign.getRaised_budjet())/1000)+"K");
+        byte[] imageBytes = campaign.getCampaign_image();
+        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(imageBytes);
+        Image image = new Image(byteArrayInputStream);
+        ImagePattern imagePattern = new ImagePattern(image);
+        c_image.setFill(imagePattern);
     }
 
 }

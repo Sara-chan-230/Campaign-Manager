@@ -3,38 +3,52 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="858.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.Note">
-    <children>
-        <AnchorPane layoutX="-1.0" layoutY="28.0" prefHeight="371.0" prefWidth="860.0">
-            <children>
-                <TextField fx:id="note_text" layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="471.0" promptText="Note" style="-fx-background-color: #ffffff; -fx-border-color: #d9d9d9; -fx-border-radius: 5px;">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></TextField>
-                <Button alignment="CENTER" layoutX="673.0" layoutY="14.0" mnemonicParsing="false" onAction="#add_new_note" prefHeight="45.0" prefWidth="176.0" style="-fx-background-color: #0866FF;" text="Add new Note" textFill="WHITE">
-                    <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../Images/Icon/add-task.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-                </Button>
-                <ColorPicker fx:id="color_note" layoutX="514.0" layoutY="14.0" prefHeight="45.0" prefWidth="125.0" promptText="color" style="-fx-background-color: #0099FF;">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></ColorPicker>
-            <FlowPane fx:id="note_container" hgap="20.0" layoutX="14.0" layoutY="79.0" prefHeight="0.0" prefWidth="0.0" vgap="20.0" />
-            </children>
-        </AnchorPane>
-    </children>
-</AnchorPane>
+<ScrollPane hbarPolicy="NEVER" prefWidth="861.0" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.campaignmanager.Note">
+   <content>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefWidth="858.0" style="-fx-background-color: #ffffff;">
+          <children>
+              <AnchorPane layoutX="-1.0" layoutY="28.0" minWidth="-Infinity" prefHeight="371.0" prefWidth="860.0">
+                  <children>
+                      <TextField fx:id="note_text" layoutX="14.0" layoutY="14.0" prefHeight="45.0" prefWidth="471.0" promptText="Note" style="-fx-background-color: #ffffff; -fx-border-color: #d9d9d9; -fx-border-radius: 5px;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TextField>
+                      <Button alignment="CENTER" layoutX="673.0" layoutY="14.0" mnemonicParsing="false" onAction="#add_new_note" prefHeight="45.0" prefWidth="176.0" style="-fx-background-color: #0866FF;" text="Add new Note" textFill="WHITE">
+                          <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@Icons/add-task.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                      </Button>
+                      <ColorPicker fx:id="color_note" layoutX="514.0" layoutY="14.0" prefHeight="45.0" prefWidth="125.0" promptText="color" style="-fx-background-color: #0099FF;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ColorPicker>
+                  <Label layoutX="14.0" layoutY="79.0" text="Notes" textFill="#d4cfcf">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <FlowPane fx:id="note_container" hgap="20.0" layoutX="14.0" layoutY="122.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="833.0" vgap="20.0" />
+                  </children>
+              </AnchorPane>
+          </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

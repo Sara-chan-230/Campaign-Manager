@@ -26,7 +26,9 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("Sign In");
         stage.show();
+
     }
+
 
     public static void main(String[] args) {
         launch();

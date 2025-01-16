@@ -2,10 +2,16 @@ package com.example.campaignmanager;
 
 import dbc.Classes.Note;
 import javafx.fxml.FXML;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class NoteModel {
 
@@ -16,13 +22,26 @@ public class NoteModel {
     private Text note_date;
 
     @FXML
-    private VBox note_container;
+    private AnchorPane note_container;
 
-    public void setNote_data(Note note){
+    @FXML
+    private Rectangle color_change;
+
+    @FXML
+    private Button imag;
+
+
+    public void setNote_data(Note note) {
         note_body.setText(note.getDescription());
         Date date = note.getDate();
         note_date.setText(date.toString());
-        note_container.setStyle("-fx-background-color : "+ note.getColor());
+        color_change.setFill(Color.valueOf(note.getColor()));
+        Image img = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/campaignmanager/Models/Icons/notes.png")));
+        ImageView imv = new ImageView(img);
+        imv.setFitHeight(45);
+        imv.setFitWidth(45);
+        imag.setGraphic(imv);
+
     }
 
 }

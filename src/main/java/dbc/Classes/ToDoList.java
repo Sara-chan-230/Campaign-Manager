@@ -6,13 +6,15 @@ public class ToDoList {
     private Boolean completed;
     private String color;
     private int iD_O;
+    private int camp_id;
 
-    public ToDoList(int id, String content, Boolean completed, String color, int iD_O) {
+    public ToDoList(int id, String content, Boolean completed, String color, int iD_O, int iCamp_id) {
         this.id = id;
         this.content = content;
         this.completed = completed;
         this.color = color;
         this.iD_O = iD_O;
+        this.camp_id = camp_id;
     }
 
     public int getId() {
@@ -53,5 +55,9 @@ public class ToDoList {
 
     public void setiD_O(int iD_O) {
         this.iD_O = iD_O;
+    }
+
+    public int getCamp_id() {
+        return camp_id;
     }
 }

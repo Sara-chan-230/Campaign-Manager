@@ -8,13 +8,15 @@ public class Note {
     private Date date;
     private String color;
     private int org_id;
+    private int campaign_id;
 
-    public Note(int id, String description, Date date, String color, int org_id) {
+    public Note(int id, String description, Date date, String color, int org_id, int campaign_id) {
         this.id = id;
         this.description = description;
         this.date = date;
         this.color = color;
         this.org_id = org_id;
+        this.campaign_id = campaign_id;
     }
 
     public int getId() {
@@ -56,5 +58,9 @@ public class Note {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public void setCampaign_id(int campaign_id) {
+        this.campaign_id = campaign_id;
     }
 }

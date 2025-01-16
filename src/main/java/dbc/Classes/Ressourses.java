@@ -6,13 +6,17 @@ public class Ressourses {
     private float price;
     private int quantity;
     private int id_or;
+    private int camp_id;
 
-    public Ressourses(int id, String name, float price, int quantity, int id_or) {
+
+
+    public Ressourses(int id, String name, float price, int quantity, int id_or, int camp_id) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.id_or = id_or;
+        this.camp_id = camp_id;
     }
 
     public int getId() {
@@ -53,5 +57,9 @@ public class Ressourses {
 
     public void setId_or(int id_or) {
         this.id_or = id_or;
+    }
+
+    public int getCamp_id() {
+        return camp_id;
     }
 }

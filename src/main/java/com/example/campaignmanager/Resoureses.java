@@ -62,21 +62,18 @@ public class Resoureses implements Initializable {
 
     }
 
-    ObservableList list_resous = FXCollections.observableArrayList(Data_base_function.fetch_ressourses(2));
+    ObservableList list_resous = FXCollections.observableArrayList(Data_base_function.fetch_ressourses(1,2));
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        resource_t.getStyleClass().add("table-view");
         number_r.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 100, 1));
-        total_resources.setText(Data_base_function.total_resourses(2)+"");
+        total_resources.setText(Data_base_function.total_resourses(1,2)+"");
         resource.setCellValueFactory(new PropertyValueFactory<>("name"));
         resource_budget.setCellValueFactory(new PropertyValueFactory<>("price"));
         need_number.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         addButtonToTable();
-
-
         table_r.setItems(list_resous);
-
-
     }
 
     private void addButtonToTable() {
@@ -89,14 +86,16 @@ public class Resoureses implements Initializable {
                 hBox.setSpacing(10);
 
                 ImageView updateIcon = new ImageView(new Image("file:src/main/resources/com/example/campaignmanager/Images/Icon/update.png"));
-                updateIcon.setFitWidth(16);
-                updateIcon.setFitHeight(16);
+                updateIcon.setFitWidth(20);
+                updateIcon.setFitHeight(20);
                 updateButton.setGraphic(updateIcon);
+                updateButton.setStyle("-fx-background-color: transparent; -fx-cursor: hand;");
 
                 ImageView deleteIcon = new ImageView(new Image("file:src/main/resources/com/example/campaignmanager/Images/Icon/delete.png"));
-                deleteIcon.setFitWidth(16);
-                deleteIcon.setFitHeight(16);
+                deleteIcon.setFitWidth(20);
+                deleteIcon.setFitHeight(20);
                 deleteButton.setGraphic(deleteIcon);
+                deleteButton.setStyle("-fx-background-color: transparent; -fx-cursor: hand");
 
                 updateButton.setOnAction(event -> {
                     Ressourses resource = getTableRow().getItem();

@@ -41,17 +41,22 @@ public class Task implements Initializable {
 
     }
 
-    ObservableList<ToDoList> task_list = FXCollections.observableArrayList(Data_base_function.fetch_In_prgress_task(2));
-    ObservableList<ToDoList> c_task_list = FXCollections.observableArrayList(Data_base_function.fetch_campleted_task(2));
+    ObservableList<ToDoList> task_list = FXCollections.observableArrayList(Data_base_function.fetch_In_prgress_task(1,2));
+    ObservableList<ToDoList> c_task_list = FXCollections.observableArrayList(Data_base_function.fetch_campleted_task(1,2));
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             for (ToDoList task : task_list) {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("task-m.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Models\\task-m.fxml"));
+                if (fxmlLoader.getLocation() == null) {
+                    System.err.println("FXML file not found: Campaign.fxml");
+                    return;
+                }
+                AnchorPane task_box = fxmlLoader.load();
                 TaskModel tm = fxmlLoader.getController();
                 tm.setTask_Data(task);
-                AnchorPane task_box = fxmlLoader.load();
                 inProgress_task.getChildren().add(task_box);
+                inProgress_task.requestLayout();
 
             }
         } catch (IOException e) {
@@ -60,11 +65,14 @@ public class Task implements Initializable {
 
         try {
             for (ToDoList task : c_task_list) {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("task-mc.fxml"));
+                System.out.println(c_task_list);
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Models\\task-mc.fxml"));
+                AnchorPane task_box = fxmlLoader.load();
                 TaskModel tm = fxmlLoader.getController();
                 tm.setTask_Data(task);
-                AnchorPane task_box = fxmlLoader.load();
+
                 completed_tasks.getChildren().add(task_box);
+                completed_tasks.requestLayout();
             }
         } catch (IOException e) {
             throw new RuntimeException(e);

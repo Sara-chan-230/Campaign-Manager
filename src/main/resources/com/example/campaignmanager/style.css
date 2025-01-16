@@ -208,22 +208,46 @@
 }
 
 .table-view {
+    -fx-border-color: #ccc;
+    -fx-border-width: 0px;
+    -fx-background-color: #f9f9f9; /* Background of the table */
+}
+
+.table-view .column-header {
+    -fx-background-color: #0866FF; /* Make header background transparent */
+    -fx-text-fill: white; /* Text color in the header */
+    -fx-font-weight: bold; /* Make text bold */
+    -fx-alignment: CENTER; /* Align text to the center */
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white; /* Text color for labels inside headers */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9; /* Alternate row colors */
+}
+
+.table-row-cell:even {
     -fx-background-color: #ffffff;
-    -fx-font-size: 14px;
 }
-.table-view .cell {
-    -fx-padding: 5px;
-    -fx-background-color: #0866FF;
-    -fx-border-color: white;
-    -fx-border-width: 0 2px 2px 0;
-    -fx-text-fill: white;
+
+/* Cell alignment */
+.table-cell {
+    -fx-alignment: CENTER-LEFT; /* Default alignment */
 }
+
+/* Numeric cell alignment */
+.numeric-cell {
+    -fx-alignment: CENTER-RIGHT;
+}
+
+/* Remove focus highlight */
+.table-view:focused .table-row-cell:focused {
+    -fx-background-color: transparent;
+}
+
+/* Highlight hover effect */
 .table-view .cell:hover {
     -fx-background-color: #e0e0e0;
 }
-.table-view .column-header .label {
-    -fx-text-fill: white;
-    -fx-font-weight: bold; 
-}
-
-

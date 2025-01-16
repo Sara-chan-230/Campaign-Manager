@@ -17,7 +17,7 @@
                 <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
             </padding>
             <children>
-                <Pane layoutX="40.0" layoutY="27.0" prefHeight="68.0" prefWidth="855.0" style="-fx-background-color: #C62098; -fx-background-radius: 50px;">
+                <Pane layoutX="40.0" layoutY="27.0" prefHeight="68.0" prefWidth="855.0" style="-fx-background-color: #C62098; -fx-background-radius: 10px;">
                     <children>
                         <ImageView fitHeight="59.0" fitWidth="59.0" layoutX="757.0" layoutY="5.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
                             <image>

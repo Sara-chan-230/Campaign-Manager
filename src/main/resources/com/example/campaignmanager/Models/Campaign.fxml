@@ -17,7 +17,7 @@
          <children>
             <Circle id="cir" fill="#3c7cb3" layoutX="41.0" layoutY="153.0" radius="27.0" stroke="WHITE" strokeType="INSIDE" />
             <Circle fill="WHITE" layoutX="41.0" layoutY="153.0" radius="23.0" stroke="WHITE" strokeType="INSIDE" />
-            <Text fx:id="rized_porcentage" fill="#4f45d9" layoutX="27.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20%">
+            <Text fx:id="rized_porcentage" fill="#4f45d9" layoutX="21.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20%" textAlignment="CENTER" wrappingWidth="40.393554687500114">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -29,7 +29,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Button id="modb" layoutX="12.0" layoutY="275.0" mnemonicParsing="false" onAction="#goCampaign" prefHeight="32.0" prefWidth="235.0" text="Manage Campaign">
+      <Button id="modb" fx:id="go" layoutX="12.0" layoutY="275.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="235.0" text="Manage Campaign">
          <graphic>
             <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -49,7 +49,7 @@
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="goal" layoutX="22.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20.000$" />
+                  <Text fx:id="goal" layoutX="7.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20.000$" textAlignment="CENTER" wrappingWidth="67.82551193237305" />
                </children>
             </Pane>
             <Pane layoutX="87.0" layoutY="8.0" prefHeight="37.0" prefWidth="88.0" styleClass="sty">
@@ -59,7 +59,7 @@
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="raised" layoutX="26.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.000$" />
+                  <Text fx:id="raised" layoutX="7.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.000$" textAlignment="CENTER" wrappingWidth="74.33331298828136" />
                </children>
             </Pane>
             <Pane layoutX="175.0" layoutY="8.0" prefHeight="46.0" prefWidth="81.0" style="-fx-background-color: transparent;">
@@ -69,7 +69,7 @@
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="left" layoutX="18.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16.000$" />
+                  <Text fx:id="left" layoutX="-5.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16.000$" textAlignment="CENTER" wrappingWidth="80.787109375" />
                </children>
             </Pane>
          </children>
