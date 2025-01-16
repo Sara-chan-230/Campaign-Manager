@@ -88,12 +88,12 @@ VALUES
 INSERT INTO campaign (org_id, campaign_name, campaign_description, campaign_date, needed_budjet, raised_budjet, campaign_status, campaign_image)
 VALUES
 (1, 'Rebuilding Earthquake-affected Homes', 'This project focuses on providing new homes for families who lost everything in the earthquake. It aims to create safe and stable housing, allowing these families to start over. Currently, the project is progressing as planned.', '2025-01-01', 1000000.00, 300000.00, 'In progress', NULL),
-(1, 'Medical Assistance for Earthquake Victims', 'This initiative involves sending vital medical supplies, including medications and equipment, to areas impacted by the earthquake. The goal is to provide urgent medical care and prevent disease outbreaks. The operation is ongoing.', '2025-02-01', 500000.00, 00.00, 'Coming', NULL),
+(1, 'Medical Assistance for Earthquake Victims', 'This initiative involves sending vital medical supplies, including medications and equipment, to areas impacted by the earthquake. The goal is to provide urgent medical care and prevent disease outbreaks. The operation is ongoing.', '2025-02-01', 500000.00, 300000.00, 'In progress', NULL),
 (1, 'Search and Rescue Operations', 'Teams are being deployed to search for survivors in collapsed buildings, using specialized equipment like sniffer dogs and sensors. This mission has now been completed successfully.', '2025-03-01', 800000.00, 800000.00, 'Completed', NULL),
 (1,'Distribution compaign', 'This project ensures that food and water are provided to the affected communities. It’s designed to help people survive in the immediate aftermath of the disaster. The distribution is still ongoing.', '2025-04-01', 250000.00, 100000.00, 'In progress', NULL),
 (1, 'Temporary Shelters for Displaced Families', 'Temporary shelters are being set up for families who lost their homes, offering them a safe place to stay while more permanent solutions are planned. The project is currently in the planning phase.', '2025-05-01', 300000.00, 00.00, 'Coming', NULL),
 (1, 'Rehabilitation of Damaged Infrastructure', 'This project focuses on repairing roads, bridges, and critical infrastructure. The goal is to restore essential services and help communities get back to normal. The rehabilitation efforts are set to begin soon.', '2025-06-01', 1500000.00, 00.00, 'Coming', NULL),
-(1, 'Earthquake Awareness Campaign', 'The campaign aims to raise awareness about earthquake preparedness, teaching communities how to protect themselves in case of future earthquakes. It is currently active and ongoing.', '2025-07-01', 100000.00, 00.00, 'Coming', NULL),
+(1, 'Earthquake Awareness Campaign', 'The campaign aims to raise awareness about earthquake preparedness, teaching communities how to protect themselves in case of future earthquakes. It is currently active and ongoing.', '2025-07-01', 100000.00, 50000.00, 'In progress', NULL),
 (1, 'Counseling for Earthquake Survivors', 'This program offers psychological support to survivors, helping them deal with the trauma and stress caused by the disaster. The counseling efforts are ongoing to ensure survivors. mental health needs are met.', '2025-08-01', 200000.00, 50000.00, 'In progress', NULL),
 (1, 'Restoring Local Schools and Hospitals', 'This initiative focuses on repairing schools and hospitals, vital institutions that support both education and healthcare. The restoration work has been completed, and these facilities are now operational again.', '2025-09-01', 600000.00, 600000.00, 'Completed', NULL),
 (1, 'Rebuilding Earthquake-hit Villages', 'This project focuses on rebuilding entire villages that were devastated by the earthquake. It includes restoring homes and community buildings. The planning stage is underway, with construction set to begin soon.', '2025-10-01', 800000.00, 00.00, 'Coming', NULL);
@@ -142,49 +142,49 @@ VALUES
 ('Ensure timely distribution of food and water to earthquake survivors.', '2025-02-12', '#4682B4', 1, 3),
 ('Organize a fundraising event for fire victims in the south.', '2025-02-15', '#8A2BE2', 1, 5),
 ('Create awareness about earthquake preparedness in rural areas.', '2025-02-18', '#FFD700', 1, 8),
-('Ensure delivery of medical supplies to disaster-stricken zones.', '2025-02-20', '#32CD32', 2, 9),
-('Start collecting donations for victims of the recent hurricane.', '2025-03-02', '#FF4500', 2, 10),
-('Host a volunteer recruitment event for flood relief operations.', '2025-03-05', '#ADFF2F', 2, 20),
-('Prepare emergency kits for families affected by drought.', '2025-03-07', '#9ACD32', 3, 13),
-('Coordinate with local authorities for disaster response training.', '2025-03-10', '#B0C4DE', 3, 40),
-('Organize a donation drive for wildfire victims in the north.', '2025-03-15', '#D2691E', 3, 38),
-('Coordinate emergency cleanup operations after oil spill in northern coast.', '2025-03-01', '#D2691E', 4, 24),
-('Ensure marine life rehabilitation efforts are on schedule.', '2025-03-05', '#20B2AA', 4, 22),
-('Develop a public awareness campaign on the importance of coral reefs.', '2025-03-07', '#FF6347', 4, 11),
-('Organize a fundraiser to support ocean conservation projects.', '2025-03-10', '#87CEEB', 4, 17),
-('Collaborate with local authorities to prevent illegal fishing in protected areas.', '2025-03-12', '#A9A9A9', 4, 33),
+('Ensure delivery of medical supplies to disaster-stricken zones.', '2025-02-20', '#32CD32', 2, 11),
+('Start collecting donations for victims of the recent hurricane.', '2025-03-02', '#FF4500', 2, 19),
+('Host a volunteer recruitment event for flood relief operations.', '2025-03-05', '#ADFF2F', 2, 13),
+('Prepare emergency kits for families affected by drought.', '2025-03-07', '#9ACD32', 3, 24),
+('Coordinate with local authorities for disaster response training.', '2025-03-10', '#B0C4DE', 3, 26),
+('Organize a donation drive for wildfire victims in the north.', '2025-03-15', '#D2691E', 3, 21),
+('Coordinate emergency cleanup operations after oil spill in northern coast.', '2025-03-01', '#D2691E', 4, 31),
+('Ensure marine life rehabilitation efforts are on schedule.', '2025-03-05', '#20B2AA', 4, 36),
+('Develop a public awareness campaign on the importance of coral reefs.', '2025-03-07', '#FF6347', 4, 40),
+('Organize a fundraiser to support ocean conservation projects.', '2025-03-10', '#87CEEB', 4, 34),
+('Collaborate with local authorities to prevent illegal fishing in protected areas.', '2025-03-12', '#A9A9A9', 4, 35),
 ('Monitor water quality in coastal regions affected by pollution.', '2025-03-15', '#2E8B57', 4, 31);
 
 
-INSERT INTO ressourses (name, price, quantity, org_id)
+INSERT INTO ressourses (name, price, quantity, org_id, cam_id)
 VALUES
-('Portable Water Filters', 25.00, 1000, 1),
-('First Aid Kits', 30.00, 1500, 1),
-('Shelter Tents', 100.00, 500, 1),
-('Canned Food', 2.00, 5000, 2),
-('Emergency Blankets', 10.00, 2000, 2),
-('Flashlights', 15.00, 1000, 2),
-('Fire Extinguishers', 50.00, 200, 3),
-('Solar-Powered Generators', 200.00, 50, 3),
-('Water Tankers', 1500.00, 10, 3),
-('Portable Toilets', 100.00, 50, 4),
-('Medical Supplies', 200.00, 300, 4),
-('Drought-Resistant Seeds', 5.00, 3000, 4),
-('Fireproof Clothing', 75.00, 200, 4);
+('Portable Water Filters', 25.00, 1000, 1, 2),
+('First Aid Kits', 30.00, 1500, 1, 5),
+('Shelter Tents', 100.00, 500, 1, 8),
+('Canned Food', 2.00, 5000, 2, 15),
+('Emergency Blankets', 10.00, 2000, 2, 13),
+('Flashlights', 15.00, 1000, 2, 18),
+('Fire Extinguishers', 50.00, 200, 3, 24),
+('Solar-Powered Generators', 200.00, 50, 3, 26),
+('Water Tankers', 1500.00, 10, 3, 21),
+('Portable Toilets', 100.00, 50, 4, 32),
+('Medical Supplies', 200.00, 300, 4, 36),
+('Drought-Resistant Seeds', 5.00, 3000, 4, 31),
+('Fireproof Clothing', 75.00, 200, 4, 40);
 
 
-INSERT INTO ToDoList (content, completed, color, org_id)
+INSERT INTO ToDoList (content, completed, color, org_id, cam_id)
 VALUES
-('Organize an emergency response plan for flood victims.', FALSE, '#8A2BE2', 1),
-('Set up an emergency food distribution network for earthquake survivors.', TRUE, '#32CD32', 1),
-('Recruit volunteers to help with search-and-rescue operations.', FALSE, '#FFD700', 1),
-('Coordinate with local authorities to ensure safety in affected areas.', TRUE, '#FF6347', 2),
-('Prepare medical tents and resources for disaster-stricken regions.', FALSE, '#FF4500', 2),
-('Ensure transport logistics for rapid delivery of relief items.', TRUE, '#DC143C', 2),
-('Collect donations for drought-affected areas in the south.', FALSE, '#ADFF2F', 3),
-('Coordinate water delivery to rural regions during drought seasons.', TRUE, '#98FB98', 3),
-('Launch a fundraising campaign to combat wildfires in northern Morocco.', FALSE, '#D2691E', 3),
-('Work with local agencies to prevent disaster-related illnesses.', TRUE, '#A9A9A9', 4),
-('Provide psycho-social support services to disaster survivors.', FALSE, '#8B0000', 4),
-('Organize training on disaster preparedness and response for communities.', TRUE, '#B0E0E6', 4);
+('Organize an emergency response plan for flood victims.', FALSE, '#8A2BE2', 1, 1),
+('Set up an emergency food distribution network for earthquake survivors.', TRUE, '#32CD32', 1, 2),
+('Recruit volunteers to help with search-and-rescue operations.', FALSE, '#FFD700', 1, 4),
+('Coordinate with local authorities to ensure safety in affected areas.', TRUE, '#FF6347', 2, 11),
+('Prepare medical tents and resources for disaster-stricken regions.', FALSE, '#FF4500', 2, 14),
+('Ensure transport logistics for rapid delivery of relief items.', TRUE, '#DC143C', 2, 18),
+('Collect donations for drought-affected areas in the south.', FALSE, '#ADFF2F', 3, 24),
+('Coordinate water delivery to rural regions during drought seasons.', TRUE, '#98FB98', 3, 21),
+('Launch a fundraising campaign to combat wildfires in northern Morocco.', FALSE, '#D2691E', 3, 26),
+('Work with local agencies to prevent disaster-related illnesses.', TRUE, '#A9A9A9', 4, 31),
+('Provide psycho-social support services to disaster survivors.', FALSE, '#8B0000', 4, 32),
+('Organize training on disaster preparedness and response for communities.', TRUE, '#B0E0E6', 4, 40);
 
